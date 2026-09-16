@@ -1,39 +1,177 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#17110f" />
-  <title>Última oferta — Carnívora 40+</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <title>Última opção — Carnívora 40+</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel: mesmo ID do funil atual -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1253168553664712');
+  fbq('track','PageView');
+  fbq('trackCustom','DownsellView',{product:'Carnivora 40+ Downsell 14 Dias'});
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#050505;--panel:#0d0d0d;--red:#ff2b2b;--red2:#b90000;
+      --gold:#ffc928;--white:#f7f7f7;--muted:#9b9b9b;--green:#24d66e;
+      --head:'Oswald',sans-serif;--body:'Open Sans',sans-serif;
+    }
+    body{background:var(--bg);color:var(--white);font-family:var(--body);line-height:1.55}
+    .wrap{width:min(650px,calc(100% - 34px));margin:auto}
+    .alert{
+      padding:13px 14px;text-align:center;text-transform:uppercase;
+      font:700 clamp(12px,3.5vw,15px)/1.35 var(--head);
+      background:linear-gradient(90deg,#760000,#cf0000,#ff2b2b,#cf0000,#760000);
+      background-size:220% 100%;animation:bar 3s linear infinite
+    }
+    @keyframes bar{to{background-position:220% 0}}
+    .hero{
+      padding:40px 0 26px;text-align:center;
+      background:radial-gradient(circle at 50% -15%,rgba(255,43,43,.16),transparent 40%),#050505
+    }
+    .badge{
+      display:inline-block;padding:6px 13px;border-radius:999px;margin-bottom:14px;
+      border:1px solid rgba(255,43,43,.45);background:rgba(255,43,43,.08);
+      color:#ff7777;font:700 11px var(--head);letter-spacing:1.4px;text-transform:uppercase
+    }
+    h1,h2{font-family:var(--head);text-transform:uppercase}
+    h1{font-size:clamp(34px,9vw,58px);line-height:1.03}
+    h1 span{color:var(--red)}
+    .lead{max-width:580px;margin:17px auto 0;color:#b9b9b9;font-size:clamp(15px,4vw,18px)}
+    .lead strong{color:#fff}
+    .box{
+      margin:22px auto 0;padding:20px;border-radius:10px;
+      border:1px solid rgba(255,43,43,.26);border-left:4px solid var(--red);
+      background:linear-gradient(135deg,#140606,#090909);text-align:left
+    }
+    .box strong{color:#fff}
+    .product{
+      margin:26px auto 0;padding:24px 18px;border:2px solid var(--red);border-radius:14px;
+      background:linear-gradient(160deg,#150505,#090909);text-align:center;
+      box-shadow:0 0 45px rgba(255,43,43,.12)
+    }
+    .product .tag{
+      display:inline-block;background:var(--red);padding:5px 12px;border-radius:4px;
+      font:700 11px var(--head);text-transform:uppercase;letter-spacing:1px;margin-bottom:13px
+    }
+    .product h2{font-size:clamp(27px,7vw,43px);line-height:1.08}
+    .product h2 span{color:var(--red)}
+    .product .sub{color:#999;margin-top:9px;font-size:14px}
+    ul{list-style:none;margin:21px 0 0;display:grid;gap:9px;text-align:left}
+    li{padding:12px 13px;border-radius:7px;background:#101010;border:1px solid #242424;color:#c5c5c5;font-size:14px}
+    li b{color:#fff}
+    .price-label{margin-top:24px;color:#818181;font-size:13px}
+    .price{font:700 clamp(58px,16vw,84px)/1 var(--head);margin:2px 0;color:#fff}
+    .price small{font-size:.42em;vertical-align:top}
+    .once{font-size:12px;color:#8b8b8b}
+    .wiapy-wrap{max-width:540px;margin:22px auto 0}
+    #wiapy_upsell{width:100%}
+    #wiapy_upsell button,#wiapy_upsell a{
+      font-family:var(--head)!important;text-transform:uppercase;font-weight:700!important
+    }
+    .micro{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;color:#666;font-size:10.5px;margin:14px 0}
+    .warning{
+      margin-top:20px;padding:14px;border-top:1px solid rgba(255,43,43,.25);
+      color:#777;font-size:11.5px;text-align:center
+    }
+    footer{text-align:center;padding:24px 16px 34px;color:#3f3f3f;font-size:10px}
+  </style>
 </head>
 <body>
-  <div class="topbar"><span class="dot"></span>Uma alternativa mais enxuta</div>
-  <main class="downsell-page">
-    <section class="hero wrap narrow">
-      <div class="eyebrow">ESPERE — TEM UMA OPÇÃO MAIS SIMPLES</div>
-      <h1>Talvez você não precise do pacote completo. <span>Que tal começar com 14 dias?</span></h1>
-      <p class="lead">Leve apenas o <strong>Cardápio Carnívoro 14 Dias</strong>, com uma versão reduzida para facilitar suas refeições sem incluir todos os extras do plano completo.</p>
-      <div class="downsell-card">
-        <div class="mini-cover"><small>CARNÍVORA 40+</small><b>CARDÁPIO<br><strong>14 DIAS</strong></b><span>versão essencial</span></div>
-        <div class="downsell-copy">
-          <ul>
-            <li>✓ 14 dias de organização alimentar</li>
-            <li>✓ Refeições simples</li>
-            <li>✓ Lista de compras essencial</li>
-            <li class="off">— sem os bônus do Plano Prático 30 Dias</li>
-          </ul>
-          <div class="price"><span>última oportunidade</span><strong>R$ 19,90</strong><small>pagamento único</small></div>
-          <a class="cta" id="downsellButton" href="#" rel="nofollow">SIM, QUERO A VERSÃO DE 14 DIAS</a>
-          <a class="decline" id="finalDecline" href="#">Não, obrigado. Ir para minha área de acesso.</a>
-        </div>
+
+  <div class="alert">
+    ⚠️ ESPERE — ANTES DE RECUSAR TUDO, VEJA ESTA ÚLTIMA OPÇÃO
+  </div>
+
+  <main class="hero">
+    <div class="wrap">
+      <div class="badge">Última alternativa disponível</div>
+
+      <h1>
+        NÃO QUER O PACOTE COMPLETO?<br>
+        <span>COMECE PELO ESSENCIAL.</span>
+      </h1>
+
+      <p class="lead">
+        Tudo bem. Em vez do Plano Prático de 30 dias, você pode levar uma versão
+        <strong>mais curta, mais simples e mais barata</strong> para começar sem organizar o mês inteiro.
+      </p>
+
+      <div class="box">
+        Você não precisa decidir agora pelos 30 dias completos.
+        <br><br>
+        Por <strong>R$19,90</strong>, você recebe uma versão essencial de 14 dias para já ter
+        refeições e compras organizadas sem começar totalmente no improviso.
       </div>
-    </section>
+
+      <section class="product">
+        <span class="tag">🔥 Versão Essencial</span>
+        <h2>CARDÁPIO CARNÍVORO<br><span>14 DIAS</span></h2>
+        <p class="sub">Menos conteúdo, menor investimento, mesma ideia: facilitar a execução.</p>
+
+        <ul>
+          <li>✅ <b>14 dias organizados</b> para você começar sem montar tudo do zero.</li>
+          <li>✅ <b>Refeições práticas</b> para reduzir as decisões do dia a dia.</li>
+          <li>✅ <b>Lista de compras essencial</b> para facilitar a preparação.</li>
+          <li>✅ Uma alternativa mais enxuta para quem <b>não quis o plano completo de 30 dias.</b></li>
+        </ul>
+
+        <p class="price-label">última oferta por pagamento único de</p>
+        <div class="price"><small>R$</small>19<small>,90</small></div>
+        <p class="once">Produto digital • Sem assinatura</p>
+
+        <div class="wiapy-wrap">
+          <div id="wiapy_upsell"></div>
+        </div>
+
+        <div class="micro">
+          <span>🔒 Pagamento seguro</span>
+          <span>⚡ One-click</span>
+          <span>✅ Pagamento único</span>
+        </div>
+
+        <div class="warning">
+          Ao recusar esta oferta, você continua normalmente com a sua compra principal.
+        </div>
+      </section>
+    </div>
   </main>
-  <footer><div class="wrap"><b>Carnívora 40+</b><p>Conteúdo digital de caráter educacional. Resultados e experiências podem variar de pessoa para pessoa.</p></div></footer>
-  <script src="app.js"></script>
+
+  <footer>
+    Carnívora 40+ © Todos os direitos reservados
+  </footer>
+
+  <!-- WIAPY ONE-CLICK — DOWNSELL -->
+  <script src="https://wiapy.com/sell/1.0.0/sell.min.js"></script>
+  <script>
+    initWiapyUpsell({
+        linkUrl: "https://pay.wiapy.com/checkout/6a39f01c69a66255736a81a2",
+        linkText: "🔥 SIM! QUERO A VERSÃO ESSENCIAL DE 14 DIAS",
+        styles: {
+            backgroundColor: "#e10b0b",
+            hoverBackgroundColor: "#b80000",
+            fontSize: "18px",
+            borderRadius: "8px"
+        },
+        refusalLinkUrl: "https://wiapy.com/login",
+        refusalLinkText: "Não, obrigado. Quero seguir apenas com minha compra principal.",
+        refusalLinkColor: "#666666"
+    });
+  </script>
 </body>
 </html>

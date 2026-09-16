@@ -1,82 +1,428 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#17110f" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
   <title>Carnívora 40+ — Plano Prático 30 Dias</title>
-  <meta name="description" content="Oferta complementar Carnívora 40+" />
+  <meta name="description" content="Oferta complementar pós-compra do Carnívora 40+.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel: mesmo ID usado no funil atual. Remova este bloco se o pixel já for injetado globalmente pelo seu domínio. -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1253168553664712');
+  fbq('track','PageView');
+  fbq('trackCustom','UpsellView',{product:'Plano Pratico Carnivora 30 Dias'});
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#050505;
+      --bg2:#090909;
+      --card:#111;
+      --card2:#160707;
+      --red:#ff2b2b;
+      --red2:#b90000;
+      --redglow:rgba(255,43,43,.20);
+      --gold:#ffc928;
+      --white:#f7f7f7;
+      --muted:#a5a5a5;
+      --dim:#6f6f6f;
+      --green:#24d66e;
+      --head:'Oswald',sans-serif;
+      --body:'Open Sans',sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg); color:var(--white); font-family:var(--body);
+      line-height:1.58; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+    }
+    .wrap{width:min(680px,calc(100% - 34px));margin:auto}
+    .alert{
+      position:relative; overflow:hidden; text-align:center; padding:13px 14px;
+      background:linear-gradient(90deg,#780000,#cf0000,#ff2b2b,#cf0000,#780000);
+      background-size:240% 100%; animation:bar 3s linear infinite;
+      font:700 clamp(12px,3.5vw,15px)/1.35 var(--head);
+      letter-spacing:.35px; text-transform:uppercase;
+      box-shadow:0 4px 30px rgba(255,0,0,.16);
+    }
+    @keyframes bar{to{background-position:240% 0}}
+    .alert b{color:#fff}
+    .hero{
+      position:relative; text-align:center; padding:42px 0 30px;
+      background:
+       radial-gradient(circle at 50% -15%,rgba(255,43,43,.16),transparent 36%),
+       linear-gradient(#080000,#050505 72%);
+    }
+    .hero:after{
+      content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+      width:min(560px,80%);height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);
+      opacity:.55
+    }
+    .badge{
+      display:inline-flex;gap:7px;align-items:center;margin-bottom:17px;padding:7px 14px;
+      border:1px solid rgba(255,43,43,.48);border-radius:999px;
+      background:rgba(255,43,43,.08);color:#ff7d7d;
+      font:700 11px var(--head);letter-spacing:1.4px;text-transform:uppercase
+    }
+    h1,h2,h3{font-family:var(--head);text-transform:uppercase}
+    h1{
+      font-size:clamp(34px,9vw,60px);line-height:1.02;letter-spacing:-.7px;
+      text-shadow:0 4px 28px rgba(0,0,0,.7)
+    }
+    h1 .red{color:var(--red);text-shadow:0 0 28px rgba(255,43,43,.24)}
+    .hero .lead{
+      margin:18px auto 0;max-width:610px;color:#c7c7c7;font-size:clamp(15px,4vw,18px)
+    }
+    .hero .lead strong{color:#fff}
+    .down{display:block;margin-top:19px;color:var(--red);font-size:24px;animation:bounce 1.4s ease-in-out infinite}
+    @keyframes bounce{50%{transform:translateY(7px)}}
+    section{padding:38px 0}
+    .label{
+      text-align:center;color:#777;font:700 11px var(--head);letter-spacing:2.1px;
+      text-transform:uppercase;margin-bottom:11px
+    }
+    .truth{
+      background:#080808;
+    }
+    .truth h2,.product h2,.stack h2,.decision h2{
+      font-size:clamp(24px,6.2vw,38px);line-height:1.1;text-align:center;margin-bottom:20px
+    }
+    .truth h2 span,.decision h2 span{color:var(--red)}
+    .truthbox{
+      background:linear-gradient(135deg,rgba(255,43,43,.12),rgba(110,0,0,.10));
+      border:1px solid rgba(255,43,43,.25);border-left:4px solid var(--red);
+      border-radius:8px;padding:18px;margin-top:16px;color:#ddd
+    }
+    .truthbox .tlabel{
+      display:block;color:var(--red);font:700 18px var(--head);text-transform:uppercase;margin-bottom:7px
+    }
+    .truthbox strong{color:#fff}
+    .pain-list{display:grid;gap:9px;margin-top:20px}
+    .pain{
+      display:flex;gap:11px;align-items:flex-start;padding:13px 14px;border-radius:8px;
+      background:#100606;border:1px solid #291010;color:#c9c9c9;font-size:14px
+    }
+    .pain i{font-style:normal;color:var(--red);font-weight:900;font-size:18px;line-height:1.25}
+    .verdict{
+      margin-top:20px;text-align:center;padding:17px;border:1px solid rgba(255,201,40,.22);
+      background:rgba(255,201,40,.05);border-radius:8px;color:#ddd;font-size:14px
+    }
+    .verdict strong{color:var(--gold)}
+    .product{
+      background:radial-gradient(circle at 50% 0,rgba(255,43,43,.10),transparent 40%),#050505;
+    }
+    .product-card{
+      border:2px solid var(--red);border-radius:14px;padding:27px 19px;text-align:center;
+      background:linear-gradient(160deg,#160606,#090909 55%,#050505);
+      box-shadow:0 0 50px rgba(255,43,43,.12);
+      position:relative;overflow:hidden
+    }
+    .product-card:before{
+      content:"";position:absolute;left:-30%;top:0;width:28%;height:3px;
+      background:linear-gradient(90deg,transparent,#fff,transparent);
+      animation:shine 3.4s linear infinite
+    }
+    @keyframes shine{to{left:115%}}
+    .unlock{
+      display:inline-block;background:var(--red);color:#fff;padding:5px 13px;border-radius:4px;
+      font:700 11px var(--head);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:14px;
+      box-shadow:0 0 18px rgba(255,43,43,.35)
+    }
+    .product-card h2{margin:0;font-size:clamp(28px,7.5vw,46px)}
+    .product-card h2 span{color:var(--red)}
+    .product-card .sub{color:#aaa;margin:11px auto 0;max-width:550px;font-size:14px}
+    .what{
+      display:grid;gap:10px;margin-top:25px;text-align:left
+    }
+    .what .item{
+      padding:14px;border-radius:8px;background:#101010;border:1px solid #252525;
+      display:flex;gap:11px;align-items:flex-start
+    }
+    .what .icon{font-size:18px;line-height:1.3}
+    .what b{display:block;color:#fff;font-size:14px}
+    .what p{color:#8f8f8f;font-size:12.5px;margin-top:2px}
+    .stack{background:#080808}
+    .stack-grid{display:grid;gap:10px}
+    .stack-item{
+      background:#111;border:1px solid #242424;border-radius:9px;padding:15px;
+      display:grid;grid-template-columns:42px 1fr;gap:11px;align-items:start
+    }
+    .num{
+      width:42px;height:42px;border-radius:8px;background:#240808;border:1px solid #5d1717;
+      display:grid;place-items:center;color:var(--red);font:700 15px var(--head)
+    }
+    .stack-item h3{font-size:16px;margin-bottom:3px}
+    .stack-item p{font-size:12.5px;color:#8d8d8d}
+    .decision{
+      background:linear-gradient(180deg,#080808,#030303);text-align:center
+    }
+    .choice{
+      border:1px solid rgba(255,43,43,.28);background:#0d0505;border-radius:10px;padding:18px;
+      margin:18px auto 0;text-align:left
+    }
+    .choice p{font-size:14px;color:#c5c5c5;margin:7px 0}
+    .choice strong{color:#fff}
+    .arrowline{color:var(--red);font-weight:900}
+    .offer{
+      background:#050505;padding:38px 0 50px;text-align:center
+    }
+    .offerbox{
+      border:2px solid var(--red);border-radius:15px;background:linear-gradient(160deg,#140505,#090909);
+      padding:28px 18px;box-shadow:0 0 58px rgba(255,43,43,.14)
+    }
+    .only{
+      display:inline-block;color:var(--gold);font:700 11px var(--head);letter-spacing:1.4px;
+      text-transform:uppercase;margin-bottom:8px
+    }
+    .offerbox h2{font-size:clamp(25px,6.5vw,38px);line-height:1.1}
+    .offerbox h2 span{color:var(--red)}
+    .price-label{margin-top:19px;color:#858585;font-size:13px}
+    .price{
+      color:#fff;font:700 clamp(58px,16vw,86px)/1 var(--head);margin:2px 0 2px;
+      text-shadow:0 0 24px rgba(255,255,255,.06)
+    }
+    .price small{font-size:.42em;vertical-align:top}
+    .once{color:#aaa;font-size:12px}
+    .cta{
+      display:block;width:100%;max-width:560px;margin:22px auto 10px;padding:19px 16px;
+      color:#fff;text-decoration:none;border:0;border-radius:8px;cursor:pointer;
+      background:linear-gradient(135deg,#b90000,#ff2b2b,#b90000);
+      font:700 clamp(16px,4.7vw,22px)/1.2 var(--head);
+      text-transform:uppercase;letter-spacing:.5px;
+      box-shadow:0 8px 36px rgba(255,43,43,.38);
+      animation:pulse 2.2s ease-in-out infinite
+    }
+    .cta span{display:block;font:600 11px var(--body);text-transform:none;letter-spacing:0;margin-top:5px;opacity:.9}
+    @keyframes pulse{50%{transform:scale(1.018);box-shadow:0 10px 48px rgba(255,43,43,.52)}}
+
+    /* WIAPY ONE-CLICK */
+    .wiapy-box{
+      width:100%;
+      max-width:560px;
+      margin:22px auto 8px;
+    }
+    #wiapy_upsell{
+      width:100%;
+    }
+    #wiapy_upsell button,
+    #wiapy_upsell a{
+      font-family:var(--head)!important;
+      text-transform:uppercase;
+      font-weight:700!important;
+      letter-spacing:.4px;
+    }
+
+    .secure{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;color:#6e6e6e;font-size:10.5px;margin-top:14px}
+    .refuse{
+      display:inline-block;margin-top:19px;color:#595959;font-size:11.5px;text-decoration:underline;
+      text-underline-offset:3px
+    }
+    .final-warning{
+      padding:17px;background:rgba(255,43,43,.08);border-top:2px solid var(--red);
+      border-bottom:2px solid var(--red);text-align:center;color:#bbb;font-size:12px
+    }
+    .final-warning strong{color:#ff7777}
+    footer{text-align:center;padding:25px 16px 38px;color:#414141;font-size:10px;background:#030303}
+    footer strong{color:#676767}
+    .sticky{
+      display:none
+    }
+    @media(max-width:520px){
+      .hero{padding-top:34px}
+      section{padding:32px 0}
+      .sticky{
+        display:block;position:fixed;z-index:50;left:10px;right:10px;bottom:10px;
+        background:linear-gradient(135deg,#b90000,#ff2b2b);
+        color:#fff;text-decoration:none;text-align:center;border-radius:8px;padding:13px 10px;
+        font:700 15px var(--head);text-transform:uppercase;
+        box-shadow:0 8px 35px rgba(0,0,0,.55),0 0 25px rgba(255,43,43,.25)
+      }
+      body{padding-bottom:70px}
+    }
+  </style>
 </head>
 <body>
-  <div class="topbar"><span class="dot"></span>Seu acesso principal está confirmado</div>
 
-  <main>
-    <section class="hero wrap">
-      <div class="eyebrow">OFERTA ESPECIAL — APENAS NESTA PÁGINA</div>
-      <h1>Antes de acessar, quer deixar suas <span>próximas 4 semanas praticamente prontas?</span></h1>
-      <p class="lead">Adicione o <strong>Plano Prático 30 Dias</strong> e receba uma estrutura simples para organizar refeições, compras e substituições sem precisar pensar no que montar todos os dias.</p>
+  <div class="alert">
+    🚨 <b>ATENÇÃO: SUA COMPRA PRINCIPAL FOI CONFIRMADA</b> — NÃO FECHE ESTA TELA AINDA 🚨
+  </div>
 
-      <div class="hero-grid">
-        <div class="mockup" aria-label="Ilustração do Plano Prático 30 Dias">
-          <div class="mockup-shadow"></div>
-          <div class="book book-back"><small>CARNÍVORA 40+</small><b>LISTA DE<br>COMPRAS</b><span>4 semanas</span></div>
-          <div class="book book-front"><small>CARNÍVORA 40+</small><b>PLANO PRÁTICO<br><strong>30 DIAS</strong></b><span>Cardápios • Refeições • Substituições</span></div>
+  <header class="hero">
+    <div class="wrap">
+      <div class="badge">🔓 Upgrade liberado após sua compra</div>
+      <h1>
+        VOCÊ JÁ TEM O PLANO.<br>
+        <span class="red">AGORA NÃO ESTRAGUE A EXECUÇÃO NO IMPROVISO.</span>
+      </h1>
+      <p class="lead">
+        O Carnívora 40+ mostra o caminho. Mas amanhã, quando chegar a hora de decidir
+        <strong>o que comprar, o que preparar e o que fazer quando a rotina apertar</strong>,
+        você vai precisar executar — não ficar inventando na hora.
+      </p>
+      <span class="down">↓</span>
+    </div>
+  </header>
+
+  <section class="truth">
+    <div class="wrap">
+      <p class="label">A parte que quase ninguém planeja</p>
+      <h2>O PROBLEMA NÃO É TER POUCA INFORMAÇÃO.<br><span>É TER DECISÃO DEMAIS.</span></h2>
+
+      <div class="truthbox">
+        <span class="tlabel">⚠️ A VERDADE É ESTA:</span>
+        Você pode ter um ótimo plano e ainda assim transformar cada refeição numa negociação consigo mesmo.
+        <br><br>
+        <strong>“O que eu como hoje?” “O que compro?” “Dá tempo de preparar?” “Tem substituição?”</strong>
+        <br><br>
+        Quanto mais você improvisa, mais fácil fica adiar, repetir sempre a mesma coisa ou sair da rotina.
+      </div>
+
+      <div class="pain-list">
+        <div class="pain"><i>✕</i><span>Abrir a geladeira e perceber que <strong>não comprou o que precisava.</strong></span></div>
+        <div class="pain"><i>✕</i><span>Chegar cansado e gastar energia decidindo <strong>qual refeição montar.</strong></span></div>
+        <div class="pain"><i>✕</i><span>Enjoar porque está repetindo as mesmas combinações <strong>por falta de alternativa pronta.</strong></span></div>
+        <div class="pain"><i>✕</i><span>Ter um dia corrido e abandonar a organização porque <strong>não existe um plano B.</strong></span></div>
+      </div>
+
+      <div class="verdict">
+        Você não precisa de “mais motivação”. Você precisa de <strong>menos decisões desnecessárias.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="wrap">
+      <div class="product-card">
+        <span class="unlock">🔥 Liberado somente nesta etapa</span>
+        <h2>PLANO PRÁTICO<br><span>CARNÍVORA 30 DIAS</span></h2>
+        <p class="sub">
+          Uma camada de execução para transformar o seu plano em uma rotina organizada:
+          compras, refeições, substituições e alternativas rápidas em um só lugar.
+        </p>
+
+        <div class="what">
+          <div class="item">
+            <span class="icon">📅</span>
+            <div><b>30 dias organizados</b><p>Uma estrutura semanal para você parar de começar cada dia do zero.</p></div>
+          </div>
+          <div class="item">
+            <span class="icon">🛒</span>
+            <div><b>Listas de compras por semana</b><p>Abra, confira e compre. Sem montar lista no improviso toda vez.</p></div>
+          </div>
+          <div class="item">
+            <span class="icon">⚡</span>
+            <div><b>Refeições rápidas para dias corridos</b><p>Opções objetivas para quando tempo e paciência estiverem curtos.</p></div>
+          </div>
+          <div class="item">
+            <span class="icon">🔁</span>
+            <div><b>Guia de substituições</b><p>Não tem um alimento? Tenha alternativas prontas sem desmontar sua organização.</p></div>
+          </div>
+          <div class="item">
+            <span class="icon">🆘</span>
+            <div><b>Plano de emergência</b><p>Uma referência rápida para aqueles dias em que tudo sai do horário.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="wrap">
+      <p class="label">O que entra no seu acesso</p>
+      <h2>VOCÊ NÃO COMPRA MAIS TEORIA.<br>VOCÊ COMPRA <span style="color:var(--red)">EXECUÇÃO PRONTA.</span></h2>
+
+      <div class="stack-grid">
+        <div class="stack-item"><div class="num">01</div><div><h3>Mapa dos 30 dias</h3><p>Organização visual para acompanhar cada semana sem ficar reconstruindo o plano.</p></div></div>
+        <div class="stack-item"><div class="num">02</div><div><h3>4 listas de compras</h3><p>Uma lista por semana para tirar da frente a parte chata da preparação.</p></div></div>
+        <div class="stack-item"><div class="num">03</div><div><h3>Banco de refeições rápidas</h3><p>Ideias de execução simples para quando você não quer pensar.</p></div></div>
+        <div class="stack-item"><div class="num">04</div><div><h3>Matriz de substituições</h3><p>Trocas fáceis para adaptar a rotina sem ficar perdido quando algo faltar.</p></div></div>
+        <div class="stack-item"><div class="num">05</div><div><h3>Plano B para dias caóticos</h3><p>Uma referência direta para não deixar um dia corrido virar uma semana desorganizada.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="decision">
+    <div class="wrap">
+      <p class="label">Agora a decisão é simples</p>
+      <h2>VOCÊ PODE SAIR DAQUI COM O PLANO.<br><span>OU COM O PLANO + A EXECUÇÃO.</span></h2>
+
+      <div class="choice">
+        <p><span class="arrowline">→</span> Sem o upgrade: você recebe o Carnívora 40+ e organiza o resto por conta própria.</p>
+        <p><span class="arrowline">→</span> Com o upgrade: você já entra com <strong>30 dias, compras, alternativas e plano B organizados.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer" id="oferta">
+    <div class="wrap">
+      <div class="offerbox">
+        <span class="only">⚡ Oferta complementar exibida nesta página</span>
+        <h2>ADICIONE O <span>PLANO PRÁTICO 30 DIAS</span> AO SEU ACESSO</h2>
+
+        <p class="price-label">pagamento único de</p>
+        <div class="price"><small>R$</small>27<small>,90</small></div>
+        <p class="once">Acesso digital • Sem assinatura</p>
+
+        <div class="wiapy-box">
+          <div id="wiapy_upsell"></div>
         </div>
 
-        <div class="benefits">
-          <div class="benefit"><span>✓</span><div><b>4 semanas organizadas</b><p>Uma estrutura simples para você saber o que preparar em cada fase.</p></div></div>
-          <div class="benefit"><span>✓</span><div><b>Listas de compras prontas</b><p>Menos improviso e mais praticidade para organizar a semana.</p></div></div>
-          <div class="benefit"><span>✓</span><div><b>Refeições rápidas</b><p>Opções para dias corridos, sem transformar a rotina em um projeto complicado.</p></div></div>
-          <div class="benefit"><span>✓</span><div><b>Substituições fáceis</b><p>Alternativas para adaptar o plano quando algum alimento não estiver disponível.</p></div></div>
+        <div class="secure">
+          <span>🔒 Pagamento seguro</span>
+          <span>⚡ One-click</span>
+          <span>✅ Pagamento único</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="offer-card" id="oferta">
-        <p class="mini">ADICIONE AO SEU PEDIDO AGORA</p>
-        <div class="price"><span>por apenas</span><strong>R$ 47,90</strong><small>pagamento único</small></div>
-        <a class="cta" id="upsellButton" href="#" rel="nofollow">SIM, QUERO O PLANO PRÁTICO 30 DIAS<small>Adicionar ao meu pedido</small></a>
-        <div class="secure">🔒 Compra segura • Acesso digital</div>
-        <a class="decline" href="downsell.html">Não, obrigado. Prefiro seguir sem o Plano Prático.</a>
-      </div>
-    </section>
+  <div class="final-warning">
+    <div class="wrap">
+      ⚠️ <strong>Importante:</strong> o Plano Prático é um complemento opcional.
+      Sua compra principal continua confirmada mesmo que você recuse esta oferta.
+    </div>
+  </div>
 
-    <section class="section soft">
-      <div class="wrap narrow">
-        <div class="section-label">POR QUE ISSO COMPLEMENTA SUA COMPRA?</div>
-        <h2>Você já tem o caminho. Agora falta deixar a execução mais simples.</h2>
-        <p class="center-copy">O Carnívora 40+ mostra a estratégia. O Plano Prático 30 Dias foi pensado para reduzir decisões repetitivas no dia a dia: o que comprar, o que preparar e o que usar como alternativa.</p>
-        <div class="compare">
-          <div class="compare-box muted"><span>SEM O PLANO PRÁTICO</span><p>“O que eu preparo hoje?”</p><p>“O que compro essa semana?”</p><p>“O que uso no lugar disso?”</p></div>
-          <div class="compare-arrow">→</div>
-          <div class="compare-box strong"><span>COM O PLANO PRÁTICO</span><p>Semana organizada</p><p>Compras definidas</p><p>Alternativas à mão</p></div>
-        </div>
-      </div>
-    </section>
+  <footer>
+    <strong>Carnívora 40+ © Todos os direitos reservados</strong><br>
+    Conteúdo digital educacional. Ajuste os itens desta página para corresponder exatamente ao produto que você entregará.
+  </footer>
 
-    <section class="section wrap narrow">
-      <div class="section-label">O QUE VOCÊ RECEBE</div>
-      <h2>Um pacote enxuto, feito para ser usado.</h2>
-      <div class="contents">
-        <article><div>01</div><h3>Cardápio de 30 dias</h3><p>Estrutura semanal para facilitar a organização das refeições.</p></article>
-        <article><div>02</div><h3>Lista de compras</h3><p>Separada por semana para você comprar sem montar tudo do zero.</p></article>
-        <article><div>03</div><h3>Refeições rápidas</h3><p>Ideias práticas para os dias em que tempo é o que menos sobra.</p></article>
-        <article><div>04</div><h3>Guia de substituições</h3><p>Opções simples para manter a rotina flexível.</p></article>
-      </div>
-      <div class="final-box">
-        <h2>Quer receber tudo junto com seu acesso?</h2>
-        <p>Adicione agora o Plano Prático 30 Dias por pagamento único.</p>
-        <div class="final-price">R$ 47,90</div>
-        <a class="cta" id="upsellButtonBottom" href="#" rel="nofollow">SIM, ADICIONAR AO MEU PEDIDO</a>
-        <a class="decline" href="downsell.html">Não, quero continuar sem o plano.</a>
-      </div>
-    </section>
-  </main>
+  <a href="#oferta" class="sticky">🔥 VER OFERTA — R$27,90</a>
 
-  <footer><div class="wrap"><b>Carnívora 40+</b><p>Conteúdo digital de caráter educacional. Resultados e experiências podem variar de pessoa para pessoa.</p></div></footer>
-  <script src="app.js"></script>
+  <!-- WIAPY ONE-CLICK -->
+  <script src="https://wiapy.com/sell/1.0.0/sell.min.js"></script>
+  <script>
+    /*
+      Script de upsell enviado pela plataforma Wiapy.
+      A URL de recusa ainda está apontando para https://wiapy.com/login,
+      exatamente como veio no snippet. Trocaremos pelo downsell quando você enviar.
+    */
+    initWiapyUpsell({
+        linkUrl: "https://pay.wiapy.com/checkout/6a39f38f33765853d3f6d911",
+        linkText: "🔥 SIM! QUERO ENTRAR COM OS 30 DIAS ORGANIZADOS",
+        styles: {
+            backgroundColor: "#e10b0b",
+            hoverBackgroundColor: "#b80000",
+            fontSize: "18px",
+            borderRadius: "8px"
+        },
+        refusalLinkUrl: "./downsell.html",
+        refusalLinkText: "Não, obrigado. Prefiro ver uma opção mais simples.",
+        refusalLinkColor: "#666666"
+    });
+  </script>
 </body>
 </html>
